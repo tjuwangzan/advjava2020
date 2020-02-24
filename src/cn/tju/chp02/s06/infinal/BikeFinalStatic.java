@@ -1,4 +1,4 @@
-package cn.tju.chp02.s06.inheritfinal;
+package cn.tju.chp02.s06.infinal;
 
 public class BikeFinalStatic {
 	static final int data;

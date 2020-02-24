@@ -6,10 +6,13 @@ public class CarMain {
 		car.name = "大众";
 		car.price = 20.5;		
 		car.getCarInfo();
+		
 		for (int i = 0; i < args.length; i++) {
-			System.out.print(args[i]);
+			System.out.println(args[i]);
 		}
+		
 		
 	}
 	
+
 }

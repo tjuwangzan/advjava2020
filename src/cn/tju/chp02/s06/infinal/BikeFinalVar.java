@@ -1,4 +1,4 @@
-package cn.tju.chp02.s06.inheritfinal;
+package cn.tju.chp02.s06.infinal;
 
 public class BikeFinalVar {
 	final int speedlimit = 90; // final variable
