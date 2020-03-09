@@ -39,6 +39,7 @@ public class PolyMor {
 		am.eat();
 		am.sleep();
 		am.run();
+		System.out.println(((Cat)am).num);
 		
 
 		System.out.println(am.num);

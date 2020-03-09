@@ -24,6 +24,7 @@ interface Test22{
 class TestInterface implements Test11,Test22{  
     @Override  
     public void show(){  
+//    	System.out.println("aaa");
         Test22.super.run1();  
     }  
   

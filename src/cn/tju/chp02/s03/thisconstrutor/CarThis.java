@@ -4,27 +4,29 @@ public class CarThis {
 	private String name;
 	private double price;
 	
-//	public CarThis() {
-//		System.out.println("一个新的Car类产生了");
-//	}
-	
-	public CarThis(String name) {
-//		this();
-		this.name = name;
 		
-	}
-	
-	
-	public CarThis(String name, double price){
-//		System.out.println("一个新的Car类产生了");
+//	public CarThis() {
+//		System.out.println("一个新的Car产生了");
+//	}
+//
+//	public CarThis(String name) {
+//		this();
+//		this.name = name;
+//		System.out.println("汽车名称："+name);		
+//	}
+//	
+//	public CarThis(String name, double price) {
 //		this.name = name;
 //		this.price = price;
-		name = name;
-		price = price;
-	}
+//		
+//	}
 	
 	void getCarInfo(){
 		System.out.println("汽车名称："+ getName() + "，汽车价格：" + getPrice());
+	}
+	
+	void print() {
+		this.getCarInfo();
 	}
 	
 	@Override

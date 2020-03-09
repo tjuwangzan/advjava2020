@@ -4,6 +4,10 @@ class BikeBase{
 	final void run(){
 		System.out.println("running");
 	}
+	
+	void run(String a) {
+		System.out.println(a);
+	}
 }
 
 public class BikeFinalMethod extends BikeBase{

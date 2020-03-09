@@ -1,4 +1,4 @@
-package cn.tju.chp02.s09.exception;
+package cn.tju.chp03.s01.exception;
 
 class MathThrow{
 	public static int div(int x, int y) throws Exception {
@@ -8,11 +8,7 @@ class MathThrow{
 
 public class ThrowsDemo {
 	public static void main(String[] args)  {
-//		try {
-//			System.out.println(MathThrow.div(10, 0));
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
+
 		try {
 			System.out.println(MathThrow.div(10, 0));
 		} catch (Exception e) {
@@ -21,4 +17,11 @@ public class ThrowsDemo {
 		}
 		System.out.println("tsss");
 	}
+	
+//	public static void main(String[] args) throws Exception  {
+//
+//		System.out.println(MathThrow.div(10, 0));
+//		
+//		System.out.println("tsss");
+//	}
 }

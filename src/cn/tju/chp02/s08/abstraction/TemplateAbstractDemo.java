@@ -3,10 +3,10 @@ package cn.tju.chp02.s08.abstraction;
 public class TemplateAbstractDemo {
 
 	public static void main(String[] args) {
-//		fun(new Robot());
+		fun(new Robot());
 //		fun(new Person());
 //		fun(new Dog());
-		fun(new Person());
+//		fun(new Person());
 
 	}
 	

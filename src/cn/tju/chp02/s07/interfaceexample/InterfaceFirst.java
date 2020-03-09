@@ -25,19 +25,19 @@ class X implements A, B{
 
 public class InterfaceFirst {
 
-//	public static void main(String[] args) {
-//		X x = new X();
-//		A a = x;
-//		B b = x;
-//		a.print();
-//		b.get();
-//	}
-	
 	public static void main(String[] args) {
-		A a = new X();
+		X x = new X();
+		A a = x;
+		B b = x;
 		a.print();
-		B b = (B)a;
 		b.get();
 	}
+	
+//	public static void main(String[] args) {
+//		A a = new X();
+//		a.print();
+//		B b = (B)a;
+//		b.get();
+//	}
 
 }

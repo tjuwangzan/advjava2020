@@ -22,6 +22,13 @@ class ProductB extends Product{
 	}
 }
 
+class ProductC extends Product{
+	@Override
+	public void show() {
+		System.out.println("produce productC");
+	}
+}
+
 class FactoryA extends Factory{
 	@Override
 	public Product manufacture() {
@@ -36,6 +43,14 @@ class FactoryB extends Factory{
 	}
 }
 
+class FactoryC extends Factory{
+	@Override
+	public Product manufacture() {
+		return new ProductC();
+	}
+}
+
+
 class FactoryType{
 	public Factory getFactory(String factoryType){
 		if(factoryType == null){
@@ -46,6 +61,8 @@ class FactoryType{
 			return new FactoryA();
 		} else if(factoryType.equals("FactoryB")){
 			return new FactoryB();
+		} else if(factoryType.equals("FactoryC")) {
+			return new FactoryC();
 		}
 		return null;
 	}
@@ -56,7 +73,7 @@ public class ACFactory {
 	public static void main(String[] args) {
 		FactoryType factoryType = new FactoryType();
 		
-		Factory factory = factoryType.getFactory("FactoryB");
+		Factory factory = factoryType.getFactory("FactoryC");
 		factory.manufacture().show();
 
 	}

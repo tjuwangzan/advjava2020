@@ -10,14 +10,18 @@ public class PolyMorphDemo {
 //	public static void main(String[] args) {
 //		B b = new B();
 //		b.print();	
+//
 //	}
 	
 	/**1. 向上转型
+	 * 编译
+	 * 运行
 	 *  
 	 */
 //	public static void main(String[] args) {
 //		A a = new B();
 //		a.print();
+////		a.funB();
 //	}
 	
 	/**2. 向下转型
@@ -70,6 +74,8 @@ public class PolyMorphDemo {
 	 */
 //	public static void main(String[] args) {
 //		fun(new C());
+//		fun(new B());
+//		fun(new A());
 //	}
 //	
 //	public static void fun(A a) {
@@ -78,7 +84,7 @@ public class PolyMorphDemo {
 	
 
 	/**
-	 * 6. 向下转型容易出现异常
+	 * 6. 向下转型容易出现异常，用instanceof来判断
 	 */
 	
 //	public static void main(String[] args) {

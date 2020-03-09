@@ -20,17 +20,26 @@ class Circle5 implements Drawable5 {
 	}
 }
 
+class Line5 implements Drawable5{
+
+	@Override
+	public void draw() {
+		System.out.println("画直线");		
+	}	
+}
+
 public class FactoryDemo {
 
 	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 //		Drawable5 d = new Rectangle5();
 //		Drawable5 dcircle = new Circle5();
 //		d.draw();
-//		
 //		dcircle.draw();
-//		
-//		Drawable5 draw = FactoryDraw.getInstance("rectangle");
+		
+//		Drawable5 draw = FactoryDraw.getInstance("line");
 //		draw.draw();
+//		Drawable5 drawrec = FactoryDraw.getInstance("rectangle");
+//		drawrec.draw();
 		
 		Drawable5 drawReflect = FactoryReflect.getInstance("Triangle5");
 		drawReflect.draw();

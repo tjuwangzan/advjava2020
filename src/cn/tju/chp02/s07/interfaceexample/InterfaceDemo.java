@@ -1,9 +1,11 @@
 package cn.tju.chp02.s07.interfaceexample;
-interface Drawable{
-	void draw();
+interface Drawable{	
+	void draw() ;
+	int num = 10;	
 }
 
 class Rectangle implements Drawable{
+	
 	public void draw(){
 		System.out.println("Drawing rectangle");
 	}
@@ -22,13 +24,12 @@ class Square implements Drawable{
 }
 
 class Star implements Drawable{
-
 	@Override
 	public void draw() {
 		System.out.println("Drawing Star");
-	}
-	
+	}	
 }
+
 
 class DrawFactory{
 	public Drawable DrawFactory(String s) throws Exception{
@@ -55,9 +56,15 @@ class DrawFactory{
 public class InterfaceDemo {
 
 	public static void main(String[] args) throws Exception {
-		DrawFactory factory = new DrawFactory();
-		Drawable d = factory.DrawFactory("Star");
-		d.draw();
+		Rectangle rec = new Rectangle();
+		rec.draw();
+//		rec.num = 20;
+//		circle.print();
+		
+		
+//		DrawFactory factory = new DrawFactory();
+//		Drawable d = factory.DrawFactory("Circle");
+//		d.draw();
 
 	}
 

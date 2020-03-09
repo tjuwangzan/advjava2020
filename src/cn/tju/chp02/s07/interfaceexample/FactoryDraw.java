@@ -6,6 +6,8 @@ public class FactoryDraw {
 			return new Rectangle5();
 		}else if ("circle".equals(drawName)) {
 			return new Circle5();
+		}else if ("line".equals(drawName)) {
+			return new Line5();
 		}else {
 			return null;
 		}

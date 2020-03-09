@@ -1,4 +1,4 @@
-package cn.tju.chp02.s09.exception;
+package cn.tju.chp03.s01.exception;
 
 public class RuntimeDemo {
 

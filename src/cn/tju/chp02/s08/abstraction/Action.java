@@ -4,7 +4,11 @@ public abstract class Action {
 	public static final int EAT=1;
 	public static final int SLEEP=5;
 	public static final int WORK=7;
-	
+	private int test;
+	public Action() {
+		this.test = 10;
+		System.out.println(this.test);
+	}
 	public void command(int flag) {
 		switch (flag) {
 		case EAT:
@@ -26,5 +30,13 @@ public abstract class Action {
 	public abstract void eat();
 	public abstract void sleep();
 	public abstract void work();
+
+	public int getTest() {
+		return test;
+	}
+
+	public void setTest(int test) {
+		this.test = test;
+	}
 
 }

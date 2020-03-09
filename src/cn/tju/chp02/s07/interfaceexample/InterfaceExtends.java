@@ -11,7 +11,7 @@ interface Showable3 extends Printable3{
 
 public class InterfaceExtends implements Showable3{
 	public void print(){
-		System.out.println("Hellow");
+		System.out.println("Hello");
 	}
 	
 	public void show(){

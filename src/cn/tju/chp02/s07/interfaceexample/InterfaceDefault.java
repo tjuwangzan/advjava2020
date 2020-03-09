@@ -5,6 +5,10 @@ interface Drawable4{
 		System.out.println("default method");
 	}
 	
+	default void test() {
+		System.out.println("another method");
+	}
+	
 	static int cube(int x){
 		return x*x*x;
 		}  
@@ -21,6 +25,7 @@ public class InterfaceDefault {
 		Drawable4 d = new Rectangle4();
 		d.draw();
 		d.msg();
+		d.test();
 		System.out.println(Drawable4.cube(5));
 
 	}

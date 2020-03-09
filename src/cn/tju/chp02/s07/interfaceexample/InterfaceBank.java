@@ -26,7 +26,7 @@ class ABC implements Bank{
 public class InterfaceBank {
 
 	public static void main(String[] args) {
-		Bank b = new ICBC();
+		Bank b = new BC();
 		System.out.println("ROI:" + b.rateOfInterest());
 
 	}

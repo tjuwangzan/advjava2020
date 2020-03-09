@@ -4,12 +4,12 @@ public class Bicycle {
 	 // the Bicycle class has two fields
     public int gear;
     public int speed;
-    //private int test;
+    int test;
         
     // the Bicycle class has one constructor
     public Bicycle( int startSpeed, int startGear) {
-        gear = startGear;
-        speed = startSpeed;
+        this.gear = startGear;
+        this.speed = startSpeed;
     }
         
     // the Bicycle class has three methods
