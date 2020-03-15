@@ -10,16 +10,17 @@ public class ExceptionDemo {
 //	}
 	
 	//2. 处理异常的情况，try-catch、try-catch-finally、try-finally
-//	public static void main(String[] args) {
-//		System.out.println("1. Division start...");
-//		try {
-//			System.out.println("2. Division:" + (10/0));
-//		} catch(ArithmeticException e) {
-//			e.printStackTrace();
-//		}
-//		System.out.println("3. Division End");
-//
-//	}
+	public static void main(String[] args) {
+		System.out.println("1. Division start...");
+		try {
+			System.out.println("2. Division:" + (10/0));
+		} catch(Exception e) {
+			e.printStackTrace();
+//			System.out.println(e);
+		}
+		System.out.println("3. Division End");
+
+	}
 	
 	//3.也可以通过打印e
 //	public static void main(String[] args) {

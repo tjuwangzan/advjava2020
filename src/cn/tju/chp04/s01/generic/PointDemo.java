@@ -32,19 +32,25 @@ public class PointDemo {
 //		int x = (Integer)p.getX();
 //		int y = (Integer)p.getY();
 		
+	
+		
 //		p.setX("东经30");
 //		p.setY("北纬20");
 //		String x = (String)p.getX();
 //		String y = (String)p.getY();
 		
+		
+		
+		
 		p.setX("东经30");
 		p.setY(10);
 		String x = (String)p.getX();
 		String y = (String)p.getY();
+		System.out.println("x坐标："+x + ",  y坐标：" + y);
 //		int y2 = (Integer)p.getY();
 		
 		
 		
-		System.out.println("x坐标："+x + ",  y坐标：" + y);
+		
 	}
 }

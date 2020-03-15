@@ -7,7 +7,7 @@ class MathThrow{
 }
 
 public class ThrowsDemo {
-	public static void main(String[] args)  {
+	public static void main(String[] args)    {
 
 		try {
 			System.out.println(MathThrow.div(10, 0));
@@ -18,10 +18,5 @@ public class ThrowsDemo {
 		System.out.println("tsss");
 	}
 	
-//	public static void main(String[] args) throws Exception  {
-//
-//		System.out.println(MathThrow.div(10, 0));
-//		
-//		System.out.println("tsss");
-//	}
+
 }

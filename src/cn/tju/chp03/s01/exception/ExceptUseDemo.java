@@ -26,10 +26,13 @@ class MyMath{
 		try {
 			result = x/y;
 		} catch(ArithmeticException e) {
+//			e.printStackTrace();
 			throw e;
 		} finally {
 			System.out.println("2. Divide end...");		
 		}
+		
+		System.out.println("3. Program end...");
 		return result;
 	}
 	
@@ -44,7 +47,7 @@ public class ExceptUseDemo {
 			System.out.println("主方法--"+MyMath.div(10, 0));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e.printStackTrace(System.out);
 		}
 		
 //		try {

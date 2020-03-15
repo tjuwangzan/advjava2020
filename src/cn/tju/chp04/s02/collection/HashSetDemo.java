@@ -15,14 +15,15 @@ public class HashSetDemo {
 		System.out.println(s1);
 		System.out.println(s2);
 		
-//		Set sn = new HashSet(s1);
-//		sn.retainAll(s2);
-//		
-//		Set su = new HashSet(s1);
-//		su.addAll(s2);
-//		
+		Set sn = new HashSet(s1);
 //		System.out.println(sn);
-//		System.out.println(su);
+		sn.retainAll(s2);
+//		
+		Set su = new HashSet(s1);
+		su.addAll(s2);
+//		
+		System.out.println(sn);
+		System.out.println(su);
 
 	}
 

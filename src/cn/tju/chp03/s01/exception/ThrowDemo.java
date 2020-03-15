@@ -13,7 +13,12 @@ public class ThrowDemo {
 	
 	public static void main(String[] args) {
 		
-//		throw new Exception("自定义异常！");
+		try {
+			throw new Exception("自定义异常！");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		System.out.println("fadfa");
 	}

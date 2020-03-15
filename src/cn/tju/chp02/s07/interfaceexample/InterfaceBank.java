@@ -8,6 +8,8 @@ class ICBC implements Bank{
 	public float rateOfInterest(){
 		return 9.15f;
 	}
+
+	
 }
 
 class BC implements Bank{
