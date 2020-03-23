@@ -56,13 +56,13 @@ public class PrintStreamDemo {
 //		pu.close();
 		
 //		2. PrintStream(打印字节), PrintWriter(打印字符)
-//		PrintStream ps = new PrintStream(new FileOutputStream(new File("D:" + File.separator + "demo2020"+
-//		File.separator+"printstream.txt")));
-//		ps.print("天津大学");
-//		ps.println("Tianjin University");
-//		ps.println(1+1);
-//		ps.println(1.1 + 1.1);
-//		ps.close();
+		PrintStream ps = new PrintStream(new FileOutputStream(new File("D:" + File.separator + "demo2020"+
+		File.separator+"printstream2.txt")));
+		ps.print("天津大学");
+		ps.println("Tianjin University");
+		ps.println(1+1);
+		ps.println(1.1 + 1.1);
+		ps.close();
 		
 
 	}

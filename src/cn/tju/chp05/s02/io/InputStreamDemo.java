@@ -14,26 +14,26 @@ public class InputStreamDemo {
 			return;
 		}
 //		1. read()
-//		if (file.exists()){
-//			InputStream is = new FileInputStream(file);
-//			byte data[] = new byte[1024];
-//			int foot = 0;
-//			int temp = 0;
-//			while((temp = is.read())!=-1) {
-//				data[foot++] = (byte) temp;
-//			}
-//			is.close();
-//			String str = new String(data,0,foot);
-//			System.out.println(str);			
-//		}
-//		 2. read(Byte[]) 将读取的数据
 		if (file.exists()){
 			InputStream is = new FileInputStream(file);
 			byte data[] = new byte[1024];
-			int lenth = is.read(data);
-			String str = new String(data,0,lenth);
-			System.out.println(str + "/end");
+			int foot = 0;
+			int temp = 0;
+			while((temp = is.read())!=-1) {
+				data[foot++] = (byte) temp;
+			}
+			is.close();
+			String str = new String(data,0,foot);
+			System.out.println(str);			
 		}
+//		 2. read(Byte[]) 将读取的数据
+//		if (file.exists()){
+//			InputStream is = new FileInputStream(file);
+//			byte data[] = new byte[1024];
+//			int lenth = is.read(data);
+//			String str = new String(data,0,lenth);
+//			System.out.println(str + "/end");
+//		}
 	
 		
 		// 3. read do while

@@ -8,7 +8,7 @@ import java.io.OutputStream;
 public class EncodeDemo {
 
 	public static void main(String[] args) throws Exception {
-		System.getProperties().list(System.out);
+//		System.getProperties().list(System.out);
 		File file = new File("D:" + File.separator + "demo2020" + File.separator + "encode.txt");
 		OutputStream os = new FileOutputStream(file);
 		

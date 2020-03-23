@@ -10,7 +10,7 @@ public class OutputStreamDemo {
 	public static void main(String[] args) throws Exception {
 		//1. 定义一个file对象
 		File file = new File("D:" + File.separator + "demo2020" + 
-				File.separator + "testoutput.txt");
+				File.separator + "testoutput1.txt");
 		
 		if(!file.getParentFile().exists()){
 			file.getParentFile().mkdirs();
@@ -27,8 +27,8 @@ public class OutputStreamDemo {
 //		for(int x = 0; x<data.length; x++){
 //			os.write(data[x]);
 //		}
-		os.write(datacn);
-//		os.write(datacn, 5, 6);
+//		os.write(data);
+		os.write(datacn, 0, 4);
 //		os.close();
 	}
 

@@ -11,9 +11,9 @@ public class FileDirectory {
 		
 		System.out.println(file2.getParent());
 		System.out.println(file2.getParentFile());
-//		if(!file2.exists()) {
-//			file2.getParentFile().mkdirs();
-//		}
+		if(!file2.exists()) {
+			file2.getParentFile().mkdirs();
+		}
 		System.out.println(file2.createNewFile());
 
 	}

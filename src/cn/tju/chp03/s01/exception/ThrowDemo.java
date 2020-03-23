@@ -17,7 +17,7 @@ public class ThrowDemo {
 			throw new Exception("自定义异常！");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e.printStackTrace(System.out);
 		}
 		
 		System.out.println("fadfa");

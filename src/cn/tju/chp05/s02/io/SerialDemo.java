@@ -33,16 +33,16 @@ public class SerialDemo {
 		unser();
 	}
 	
-//	public static void ser() throws Exception{
-//		File file = new File("E:" + File.separator + "demo2020" +
-//				File.separator + "book.ser");
-//		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file));
-//		oos.writeObject(new Book("TTTT",29.2));
-//		oos.close();
-//	}
+	public static void ser() throws Exception{
+		File file = new File("D:" + File.separator + "demo2020" +
+				File.separator + "book.ser");
+		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file));
+		oos.writeObject(new Book("TTTT",29.2));
+		oos.close();
+	}
 	
 	public static void unser() throws Exception{
-		File file = new File("E:" + File.separator + "demo2020" +File.separator + "book.ser");
+		File file = new File("D:" + File.separator + "demo2020" +File.separator + "book.ser");
 		ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file));
 		Object obj = ois.readObject();
 		Book book = (Book)obj;

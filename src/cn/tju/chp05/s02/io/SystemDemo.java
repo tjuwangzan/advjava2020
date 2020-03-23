@@ -16,11 +16,13 @@ public class SystemDemo {
 			System.out.println("-----------------");
 			System.out.println(e);
 			System.out.println("-----------------");
+//			e.printStackTrace();
 			
 		}
 		
-		OutputStream out = System.out;
-		out.write("Tianjin Unviersity".getBytes()); //屏幕输出
+//		System.out.println("天津大学");
+//		OutputStream out = System.out;
+//		out.write("Tianjin Unviersity".getBytes()); //屏幕输出
 		
 //		Consumer<String> con = System.out::println;
 //		con.accept("fadfa");

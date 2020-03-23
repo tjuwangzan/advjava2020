@@ -12,11 +12,11 @@ public class PrintStreamFormat {
 		int age = 20;
 		double score = 59.4355;
 		PrintStream ps = new PrintStream(new FileOutputStream(("D:" + File.separator + "demo2020"+
-				File.separator+"printstream.txt")));
+				File.separator+"printstream3.txt")));
 		ps.printf("姓名：%s，年龄：%d，成绩：%5.2f", name,age,score);
 		
-		String str = String.format("姓名：%s，年龄：%d，成绩：%5.2f", name,age,score);
-		System.out.println(str);
+//		String str = String.format("姓名：%s，年龄：%d，成绩：%5.2f", name,age,score);
+//		System.out.println(str);
 
 	}
 

@@ -10,28 +10,28 @@ public class ReaderDemo {
 		File file = new File("D:" + File.separator + "demo2020" + 
 				File.separator + "writer.txt");
 //		1.读取内容到字符数组
-//		if (file.exists()){
-//			Reader in = new FileReader(file);
-//			char data[] = new char[1024];
-//			int lenth = in.read(data);
-//			in.close();
-//			String str = new String(data, 0, lenth );
-//			System.out.println(str + "END");
-//		}
-		
-//		2.单个读取
-		if (file.exists()) {
+		if (file.exists()){
 			Reader in = new FileReader(file);
 			char data[] = new char[1024];
-			int temp = 0;
-			int foot = 0;
-			while((temp = in.read())!=-1) {
-				data[foot++] = (char) temp;
-			}
+			int lenth = in.read(data);
 			in.close();
-			String str = new String(data,0,foot);
+			String str = new String(data, 0, lenth );
 			System.out.println(str + "/END");
 		}
+		
+//		2.单个读取
+//		if (file.exists()) {
+//			Reader in = new FileReader(file);
+//			char data[] = new char[1024];
+//			int temp = 0;
+//			int foot = 0;
+//			while((temp = in.read())!=-1) {
+//				data[foot++] = (char) temp;
+//			}
+//			in.close();
+//			String str = new String(data,0,foot);
+//			System.out.println(str + "/END");
+//		}
 	}
 
 }

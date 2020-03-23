@@ -17,9 +17,9 @@ public class WriterDemo {
 		String str = "Writer Successful char";
 		char[] c = str.toCharArray();
 		wrt.write(c);
-		wrt.flush();
+//		wrt.flush();
 //		
-//		wrt.close();
+		wrt.close();
 		
 	}
 
