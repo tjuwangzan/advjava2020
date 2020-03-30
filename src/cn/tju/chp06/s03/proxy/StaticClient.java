@@ -6,6 +6,7 @@ public class StaticClient {
 		ISubject subject = new ProxySubject();
 		
 		subject.request();
+		subject.output();
 
 	}
 

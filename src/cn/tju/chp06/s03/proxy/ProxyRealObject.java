@@ -6,5 +6,7 @@ public class ProxyRealObject implements IProxy {
 	public void performOperations() {
 		System.out.println("This is a real object");
 	}
+	
+	
 
 }

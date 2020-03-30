@@ -9,13 +9,19 @@ class CarRef{
 	public String toString() {
 		return "This is a car!";
 	}
+	
+	public void run() {
+		System.out.println("车在跑");
+	}
 }
 
 public class ReflectionInstantiation {
 
 	public static void main(String[] args) throws Exception {
-		Class<?> clazz = Class.forName("cn.tju.scs.c03.reflection.CarRef");
+		Class<?> clazz = Class.forName("cn.tju.chp06.s01.reflection.CarRef");
 		Object obj = clazz.newInstance();
+		((CarRef) obj).run();
+		
 
 	}
 

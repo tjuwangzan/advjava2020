@@ -8,9 +8,6 @@ import java.lang.reflect.Method;
 import java.util.Properties;
 import java.util.Scanner;
 
-
-
-
 interface Fruit{
 	public void eat();
 }
@@ -40,13 +37,23 @@ class Orange implements Fruit{
 	}
 }
 
+class Watermelon implements Fruit{
+	@Override
+	public void eat() {
+		System.out.println("吃西瓜");	
+		
+	}
+}
+
 class Factory {
 //	public static Fruit getInstance(String className){
 //		if ("apple".equals(className)){
 //			return new Apple();
 //		} else if ("banana".equals(className)){
 //			return new Banana();
-//		} else{
+//		}else if ("orange".equals(className)){
+//			return new Orange(); 
+//		}else{
 //			return null;
 //		}		
 //	}
@@ -67,8 +74,10 @@ class Factory {
 public class ReflectionFactory {
 
 	public static void main(String[] args) throws Exception {
-//		Fruit f = Factory.getInstance("cn.tju.chp06.s01.reflection.Orange");
+//		Fruit f = Factory.getInstance("banana");
+//		Fruit f = Factory.getInstance("cn.tju.chp06.s01.reflection.Watermelon");
 //		f.eat();
+		
 		
 //		File file = new File("D:/demo2020/config.txt");
 //		try {

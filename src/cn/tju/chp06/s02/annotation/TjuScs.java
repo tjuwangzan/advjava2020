@@ -20,6 +20,7 @@ class Scs{
 public class TjuScs {
 
 	public static void main(String[] args) throws Exception {
+//		1.获取所有的annotation
 		String CLASS_NAME = "cn.tju.chp06.s02.annotation.Scs";
 		Class<?> clazz = Class.forName(CLASS_NAME);
 		Method[] method = clazz.getMethods();
@@ -36,9 +37,11 @@ public class TjuScs {
 			boolean Flag2 = method[i].isAnnotationPresent(Name.class);
 			if(Flag2) set.add(method[i]);
 		}
-		
+//		
 		for(Method m:set){
 			Name name = m.getAnnotation(Name.class);
+			System.out.print(m.getName() + "-");
+//			System.out.println(m.invoke(clazz.newInstance()));
 			System.out.print(name.originate());
 			System.out.println(" 创建的语言:" + name.community());
 		}

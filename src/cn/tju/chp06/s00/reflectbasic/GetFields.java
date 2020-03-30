@@ -3,29 +3,29 @@ package cn.tju.chp06.s00.reflectbasic;
 import java.lang.reflect.Field;
 
 public class GetFields {
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception  {
+//		1.定义Person对象
 		Person p = new Person();
-		Field[] fields = p.getClass().getDeclaredFields();
+		
+//		2.获取类信息
+		Class c = p.getClass();
+//		Field[] fields = c.getFields();
+		Field[] fields = c.getDeclaredFields();
+		
+		
 		for (Field field : fields) {
-//			field.setAccessible(true);
+			field.setAccessible(true);
 			if (field.getName()!="age") {
-				System.out.println(field.getName() + "--" + field.isAccessible());
-				try {
-					field.set(p, "test"+field.getName());
-				} catch (IllegalArgumentException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (IllegalAccessException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-			
+				
+				field.set(p, "test"+field.getName());				
+			}			
 		}
 		
 		for (Field field : fields) {
 			System.out.println(field.get(p));
 		}
+		
+		
 		
 	}
 

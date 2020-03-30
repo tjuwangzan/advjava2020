@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class SuppressWarningsTest {
 
-	@SuppressWarnings("deprecation")
+//	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
 		Date date = new Date();
 		date.toLocaleString();

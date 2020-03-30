@@ -8,6 +8,8 @@ public class DynamicClient {
 	public static void main(String[] args) {
 		System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
 		System.out.println(System.getProperties().get("sun.misc.ProxyGenerator.saveGeneratedFiles"));
+		
+		
 		RealSubject realSubject = new RealSubject();
 		InvocationHandler handler = new DynamicSubject(realSubject);
 		Class<?> clazz = handler.getClass();

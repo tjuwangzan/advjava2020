@@ -7,9 +7,8 @@ import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
-@Documented
-@Retention(RUNTIME)
 @Target(METHOD)
+@Retention(RUNTIME)
 public @interface Name {
 	String originate();
 	String community();

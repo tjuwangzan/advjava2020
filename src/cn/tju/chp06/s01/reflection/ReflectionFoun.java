@@ -7,13 +7,15 @@ import java.util.Iterator;
 public class ReflectionFoun {
 
 	public static void main(String[] args) throws ClassNotFoundException {
-//		Date date = new Date();
-//		Class<?> clazz = date.getClass();
-//		Class<?> clazz = Date.class;
-		Class<?> clazz = Class.forName("java.lang.Object");
-		Class<?> clazz2 = Class.forName("java.lang.Object");
-		System.out.println(clazz == clazz2);
-		Method[] methods = clazz.getDeclaredMethods();
+		Date date = new Date();
+		Class clazz1 = date.getClass();
+		Class clazz2 = Date.class;
+		Class clazz3 = Class.forName("java.util.Date");
+		
+		System.out.println(clazz1 == clazz2);
+		System.out.println(clazz1 == clazz3);
+		
+		Method[] methods = clazz1.getDeclaredMethods();
 		for (Method method : methods) {
 			System.out.println(method);
 		}

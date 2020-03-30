@@ -6,9 +6,9 @@ public class Person {
 	
 	public String namepublic;
 	protected String nameprotected;
-	String namedefault;
+	 String namedefault;
 	private String nameprivate;
-	public static String namestatic;
+	
 	
 	public Person() {}
 	
