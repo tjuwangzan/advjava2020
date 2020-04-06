@@ -21,6 +21,13 @@ public class AppMain {
 		
 		test1.printName();
 		test2.printName();
+		
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 
