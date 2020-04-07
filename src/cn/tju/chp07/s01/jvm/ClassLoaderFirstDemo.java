@@ -9,7 +9,9 @@ public class ClassLoaderFirstDemo {
 		Class clazz2 = Class.forName("cn.tju.chp07.s01.jvm.User");
 		System.out.println(clazz2.getClassLoader());
 		Class clazz3 = Class.forName("com.sun.nio.zipfs.ZipCoder");
-		System.out.println(clazz3.getClassLoader());
+		System.out.println(clazz3.getClassLoader().getParent());
+		
+//		System.out.println(clazz2.getClassLoader().getParent());
 //		System.out.println(System.getProperty("java.ext.dirs"));
 	}
 

@@ -26,7 +26,7 @@ public class PriorityDemo {
 		
 		th1.setPriority(Thread.MAX_PRIORITY);
 //		th1.setPriority(Thread.MIN_PRIORITY);
-//		th2.setPriority(Thread.MIN_PRIORITY);
+		th2.setPriority(Thread.MIN_PRIORITY);
 		
 		th1.start();
 		th2.start();

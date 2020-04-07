@@ -22,7 +22,6 @@ public class ThreadRunnableDemo {
 		MyThreadRun mt2 = new MyThreadRun("线程B");
 		MyThreadRun mt3 = new MyThreadRun("线程C");
 		
-		MyThreadRun mt = new MyThreadRun();
 		
 		new Thread(mt1).start();
 		new Thread(mt2).start();

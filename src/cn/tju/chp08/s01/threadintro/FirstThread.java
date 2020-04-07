@@ -1,15 +1,21 @@
 package cn.tju.chp08.s01.threadintro;
 
+class MyFirstThread implements Runnable{
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+		System.out.println(Thread.currentThread().getName());
+	}
+}
+
 public class FirstThread {
 	public static void main(String[] args) {
-		Thread th1 = new Thread();
+		MyFirstThread mft = new MyFirstThread();
+		Thread th1 = new Thread(mft);
 		th1.start();
-//		th1.run();
-		System.out.println(th1.getName());
-		System.out.println(th1.getId());
-		System.out.println(Thread.currentThread().getName());
-		System.out.println(th1.getPriority());
-		System.out.println(th1.getState());
+		
+
 	}
 
 }

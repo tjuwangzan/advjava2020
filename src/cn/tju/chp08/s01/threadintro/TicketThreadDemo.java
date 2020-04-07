@@ -20,7 +20,6 @@ public class TicketThreadDemo {
 		t2.setName("二号窗口");
 		t1.start();
 		t2.start();
-//		t1.start();
-//		t2.run();
+
 	}
 }

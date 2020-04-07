@@ -10,14 +10,14 @@ class Start implements Runnable{
 public class StartRun {
 
 	public static void main(String[] args) {
-		for (int i = 0; i < 2; i++) {
+//		for (int i = 0; i < 2; i++) {
 			System.out.println("创建一个线程：");
 			Start s = new Start();
 			Thread t = new Thread(s);
 			System.out.println("启动线程");
-			t.start();
-//			t.run();
-		}
+//			t.start();
+			t.run();
+//		}
 
 	}
 
