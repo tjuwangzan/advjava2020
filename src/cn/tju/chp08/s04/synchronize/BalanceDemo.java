@@ -6,14 +6,14 @@ public class BalanceDemo {
 	private String name;
 	private double balance;
 	
-	public synchronized void set(String name, double balance) {
+	public  void set(String name, double balance) {
 		this.name = name;
-//		try {
-//			Thread.sleep(2500);
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		try {
+			Thread.sleep(2500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		this.balance = balance;
 	}
 	
@@ -26,10 +26,10 @@ public class BalanceDemo {
 		Thread t1 = new Thread(()->bd.set("John", 200),"t1");
 		t1.start();
 		
-		Thread.sleep(1000);
+//		Thread.sleep(1000);
 		System.out.println(bd.getBalance("John"));
 		
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 		System.out.println(bd.getBalance("John"));
 		
 		

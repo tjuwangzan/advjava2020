@@ -5,10 +5,8 @@ public class BlockedWaitT implements Runnable{
 		BlockedWaitT brun = new BlockedWaitT();
 		Thread th1 = new Thread(brun);
 		Thread th2 = new Thread(brun);
-		
-		
+				
 		th1.start();
-		
 		th2.start();
 		
 		try {
@@ -26,7 +24,7 @@ public class BlockedWaitT implements Runnable{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(th1.getState());
+		System.out.println("线程1之后的状态：" + th1.getState());
 	}
 
 	@Override
@@ -37,7 +35,7 @@ public class BlockedWaitT implements Runnable{
 	private synchronized void syn() {
 		try {
 			Thread.sleep(1000);
-			wait();
+//			wait();
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -30,10 +30,6 @@ public class StaticDemo2 {
 			new Thread(()->sd.meth(),"t1").start();
 			new Thread(()->sd.mclass(),"t2").start();
 		}
-
-		
-		
-		
 		
 	}
 
