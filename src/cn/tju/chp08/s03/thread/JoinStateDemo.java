@@ -12,7 +12,7 @@ public class JoinStateDemo {
 			}
 		}); 
 		th1.start();
-		System.out.println("等待子线程运行完毕");
+		System.out.println("等待子线程运行完成");
 		th1.join();
 		System.out.println("子线程运行完毕");
 	}

@@ -30,7 +30,8 @@ class Counter{
      public synchronized void increase() {
          counter++;
          try {
-             Thread.sleep(30000);
+             Thread.sleep(3000);
+             System.out.println(Thread.currentThread().getName());
          } catch (InterruptedException e) {
              throw new RuntimeException(e);
          }

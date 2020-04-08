@@ -20,7 +20,7 @@ public class ReenterBlocked {
 	        }
 	    }, "存钱线程");
 	    
-	    Thread.sleep(10000); // 让取钱线程等待一段时间
+	    Thread.sleep(1000); // 让取钱线程等待一段时间
 	    depositThread.start();
 
 	    Thread.sleep(300); // 确保取钱线程已经被存钱线程所通知到
@@ -37,7 +37,7 @@ class Account {
         amount += cash;
         notify();
         try {
-            Thread.sleep(30000); // 通知后却暂时不退出
+            Thread.sleep(3000); // 通知后却暂时不退出
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -46,6 +46,7 @@ class Account {
         while (cash > amount) {
             try {
                 wait();
+                System.out.println("3.wait之后的状态" + Thread.currentThread().getState());
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

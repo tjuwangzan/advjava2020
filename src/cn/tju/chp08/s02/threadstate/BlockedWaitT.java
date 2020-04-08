@@ -35,7 +35,7 @@ public class BlockedWaitT implements Runnable{
 	private synchronized void syn() {
 		try {
 			Thread.sleep(1000);
-//			wait();
+			wait();
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
