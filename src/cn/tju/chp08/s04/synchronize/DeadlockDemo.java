@@ -34,38 +34,11 @@ class DlExample{
 	}
 }
 
-class DLThread1 extends Thread{
-	private DlExample example = null;
-	public DLThread1(DlExample example){
-		super();
-		this.example = example;
-	}
-	
-	@Override
-	public void run() {
-		example.method1();
-	}
-}
-
-class DLThread2 extends Thread{
-	private DlExample example = null;
-	public DLThread2(DlExample example){
-		super();
-		this.example = example;
-	}
-	
-	@Override
-	public void run() {
-		example.method2();
-	}
-}
 
 public class DeadlockDemo {
 
 	public static void main(String[] args) {
 		DlExample example = new DlExample();
-//		DLThread1 dlt1 = new DLThread1(example);
-//		DLThread2 dlt2 = new DLThread2(example);
 		
 		Thread dlt1 = new Thread(()->example.method1(),"t1");
 		Thread dlt2 = new Thread(()->example.method2(),"t2");

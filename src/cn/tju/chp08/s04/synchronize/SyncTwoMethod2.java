@@ -7,8 +7,8 @@ public class SyncTwoMethod2 implements Runnable{
 		SyncTwoMethod2 stm1 = new SyncTwoMethod2();
 		SyncTwoMethod2 stm2 = new SyncTwoMethod2();
 		 
-		Thread t1 = new Thread(stm1);
-		Thread t2 = new Thread(stm2);
+		Thread t1 = new Thread(stm1,"线程1");
+		Thread t2 = new Thread(stm2,"线程2");
 		t1.start();
 		t2.start();
 
@@ -19,9 +19,8 @@ public class SyncTwoMethod2 implements Runnable{
 		synchronized (this) {
 			System.out.println("被synchronized修饰，线程名：" + Thread.currentThread().getName());
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(100);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			System.out.println(Thread.currentThread().getName() + "执行完毕");

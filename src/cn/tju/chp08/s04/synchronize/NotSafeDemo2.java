@@ -4,7 +4,7 @@ public class NotSafeDemo2 implements Runnable{
 	private int count = 100;
 	
 	@Override
-	public synchronized void run() {
+	public  void run() {
 		count--;
 		System.out.println(Thread.currentThread().getName() + ": count = " + count);
 		

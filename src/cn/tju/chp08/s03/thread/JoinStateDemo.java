@@ -18,3 +18,21 @@ public class JoinStateDemo {
 	}
 
 }
+
+class Runjoin implements Runnable{
+	Thread th;
+	public Runjoin(Thread thread) {
+		this.th = thread;
+	}
+
+	@Override
+	public void run() {
+		try {
+			Thread.sleep(3000);
+			System.out.println("主线程的状态： "+th.getState());
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	
+}

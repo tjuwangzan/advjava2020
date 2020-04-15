@@ -1,33 +1,42 @@
 package cn.tju.chp08.s04.synchronize;
 
 public class VolatileDemo {
-	private  int a = 1;
+	int a = 1 ;
 	public  int getA() {
 		return a;
 	}
 	
-	public  void setA(int a) {
+	public synchronized void setA(int a) {
 		
 		this.a = a;
 	}
 	
-	public static void main(String[] args) {
-		VolatileDemo demo = new VolatileDemo();
-		new Thread(new Runnable() {			
-			@Override
-			public void run() {
+	public static void main(String[] args) throws InterruptedException {
+		while(true) {
+			VolatileDemo demo = new VolatileDemo();
+			Thread th1 = new Thread(()-> {
 				demo.setA(2);
-			}
-		}).start();
-		
-		new Thread(new Runnable() {
+				},"AAA");
+			th1.start();
 			
-			@Override
-			public void run() {
+//			System.out.println(demo.getA());
+			new Thread(new Runnable() {
+				
+				@Override
+				public void run() {
 
-				System.out.println(demo.getA());
-			}
-		}).start();
+					System.out.print(demo.getA());
+				}
+			}).start();
+			
+			try {
+	            Thread.sleep(100);
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+			
+			System.out.println("/" + demo.getA());
+		}
 	}
 
 }

@@ -6,15 +6,21 @@ interface IMessage{
 
 public class LambdaFunDemo {
 	public static void main(String[] args) {
-//		fun(new IMessage() {
+//		IMessage msg = new IMessage() {
 //			
 //			@Override
 //			public void print() {
 //				System.out.println("Hello World!");
 //			}
-//		});
+//		};
+//		
+//		fun(msg);
+		
+	
+		
 		
 		fun(()->System.out.println("Hello Wrold!"));
+		
 	}
 	
 	public static void fun(IMessage msg) {

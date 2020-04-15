@@ -13,8 +13,8 @@ public class SyncTwoMethod3 implements Runnable{
 		SyncTwoMethod3 stm1 = new SyncTwoMethod3();
 		SyncTwoMethod3 stm2 = new SyncTwoMethod3();
 		 
-		Thread t1 = new Thread(stm1);
-		Thread t2 = new Thread(stm2);
+		Thread t1 = new Thread(stm1,"线程1");
+		Thread t2 = new Thread(stm2,"线程2");
 		t1.start();
 		t2.start();
 	}

@@ -6,14 +6,14 @@ public class WaitDemo {
 		@Override
 		public void run() {
 			synchronized(object) {
-				System.out.println(Thread.currentThread().getName() + "开始执行了...");
+				System.out.println(Thread.currentThread().getName() + "开始执行了...");//1
 				try {
 					object.wait();
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				System.out.println(Thread.currentThread().getName() + "重新获取了锁");
+				System.out.println(Thread.currentThread().getName() + "重新获取了锁");//2
 			}
 		}
 	}
@@ -22,9 +22,9 @@ public class WaitDemo {
 		@Override
 		public void run() {
 			synchronized(object) {
-				System.out.println(Thread.currentThread().getName() + "开始执行了...");
+				System.out.println(Thread.currentThread().getName() + "开始执行了...");//3
 				object.notify();
-				System.out.println(Thread.currentThread().getName() + "调用了notify");
+				System.out.println(Thread.currentThread().getName() + "调用了notify");//4
 			}
 		}
 	}

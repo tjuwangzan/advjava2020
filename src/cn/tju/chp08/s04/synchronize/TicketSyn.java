@@ -21,7 +21,7 @@ class TicketThread implements Runnable{
 //		
 		for (int i = 0; i < 200; i++) {
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(100);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}

@@ -29,6 +29,12 @@ public class VolatileFlag {
 				System.out.println("线程2执行了。。。");
 			}
 		}).start();
+		
+		int a = 1;
+		int b = 1;
+		a = 2;
+		b = 3;
+		a = 2*a;
 	}
 
 }

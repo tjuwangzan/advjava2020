@@ -7,7 +7,7 @@ public class JoinDemo {
 		t1.start();
 		try {
 			t1.join();
-			System.out.println(Thread.currentThread().getState());
+//			System.out.println(Thread.currentThread().getState());
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -27,7 +27,7 @@ class JoinThread extends Thread{
 	@Override
 	public void run() {
 		for (int i = 0; i < 10; i++) {
-			System.out.println(this.getName() + " - " + i);			
+			System.out.println(Thread.currentThread().getName() + " - " + i);			
 		}
 	}
 }

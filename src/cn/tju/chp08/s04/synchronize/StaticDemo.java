@@ -2,14 +2,22 @@ package cn.tju.chp08.s04.synchronize;
 
 public class StaticDemo {
 	private static int count = 10;
-	
-	public synchronized static void meth() {
+	Object object = new Object();
+	public   void meth() {
 		count--;
 		System.out.println(Thread.currentThread().getName() + " count =" + count);
 	}
 	
+//	public  void meth() {
+//		synchronized(this) {
+//			count--;
+//			System.out.println(Thread.currentThread().getName() + " count =" + count);
+//		}
+//		
+//	}
+	
 //	public static void mthis() {
-//		synchronized (this) {
+//		synchronized (StaticDemo.class) {
 //			count--;
 //		}
 //	}
@@ -27,9 +35,9 @@ public class StaticDemo {
 		StaticDemo sd = new StaticDemo();
 
 		
-		for (int i = 0; i < 10; i++) {
-			new Thread1(sd).start();
-//			new Thread2(sd).start();
+		for (int i = 0; i < 100; i++) {
+//			new Thread1(sd).start();
+			new Thread2(sd).start();
 		}
 		
 	}
@@ -43,7 +51,7 @@ class Thread1 extends Thread{
 	}
 	@Override
 	public void run() {
-		System.out.println("Thread1 is running ...");
+//		System.out.println("Thread1 is running ...");
 		sd.mclass();
 	}
 }
@@ -55,7 +63,7 @@ class Thread2 extends Thread{
 	}
 	@Override
 	public void run() {
-		System.out.println("Thread2 is running ...");
+//		System.out.println("Thread2 is running ...");
 		sd.meth();
 	}
 }

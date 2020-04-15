@@ -13,7 +13,7 @@ public class NotSafeDemo implements Runnable{
 		th1.join();
 		th2.join();
 		
-		System.out.println(j);
+		System.out.println(j); //200000
 	}
 	@Override
 	public void run() {
